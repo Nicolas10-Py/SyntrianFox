@@ -1,15 +1,13 @@
-entrypoint = "main.py"
+run = "/home/runner/workspace/.pythonlibs/bin/python3 app.py"
 modules = ["python-3.11"]
 
 [nix]
-channel = "stable-24_05"
+packages = ["espeak-ng", "iputils"]
 
-[unitTest]
-language = "python3"
+[[ports]]
+localPort = 3000
+externalPort = 3000
 
-[gitHubImport]
-requiredFiles = [".replit", "replit.nix"]
-
-[deployment]
-run = ["python3", "main.py"]
-deploymentTarget = "cloudrun"
+[[ports]]
+localPort = 5000
+externalPort = 80

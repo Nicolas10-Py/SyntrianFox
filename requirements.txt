@@ -1,0 +1,5 @@
+eel
+openai==0.28
+pyttsx3
+flask
+python-dotenv
